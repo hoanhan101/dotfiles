@@ -1,0 +1,170 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: 
+" 	Hoanh An 
+"	hoanhan@bennington.edu
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Vundle - Plugins/Bundles Manager
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " required
+filetype off                  " required
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" List os plugins and bundles
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Extras
+"Plugin 'vim-syntastic/syntastic'
+
+" All of the plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Plugins configs 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+let g:SimpylFold_docstring_preview=1
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+" Flagging unnecessary whitespace
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" YouCompleteMe - auto-complete 
+let g:ycm_autoclose_preview_window_after_completion=1
+nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" python virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+" Syntastic - syntax checking 
+let python_highlight_all=1
+
+" pylint setting
+"let g:syntastic_python_checkers = ['pylint']
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+" Color scheme
+syntax enable
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
+" Hide .pyc file in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$']
+nnoremap nt :NERDTreeToggle<CR>
+
+" Powerline
+set laststatus=2
+
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Rebind <Leader> key
+let mapleader = ","
+
+" History
+set history=700
+set undolevels=700
+
+" Make search case insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Set encoding to UTF8
+set encoding=utf-8
+
+" Interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable mouse
+set mouse=a
+
+" Showing line numbers
+set number
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+" Split screen
+set splitbelow
+set splitright
+
+" Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fast saving
+nmap <Leader>w :w!<CR>
+
+" :W sudo saves the file 
+command W w !sudo tee % > /dev/null
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Disable backup and swap files 
+set nobackup
+set nowritebackup
+set noswapfile
+
+set clipboard=unnamed
+
+" Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+
+" Bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Moving between tabs
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+" Moving of code blocks
+vnoremap < <gv  " better indentation
+vnoremap > >gv  " better indentation
+
+" Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
