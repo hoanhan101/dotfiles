@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# -------------------------------------------------------------
+#   tmux.init - Run a personalized tmux in a specific location
+#   Author: Hoanh An (hoanhan@bennington.edu)
+#   Date: 1/13/18
+# -------------------------------------------------------------
+
+tmux new-session -c ${1-$PWD} \; \
+    split-window -v \; \
+    split-window -h \; \
+    select-pane -t 0 \;
