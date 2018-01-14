@@ -1,8 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
-" 	Hoanh An 
-"	hoanhan@bennington.edu
-"
+"   .vimrc - Vim configs file 
+" 	Author: Hoanh An (hoanhan@bennington.edu)
+"   Date: 1/13/17 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Vundle - Plugins/Bundles Manager
