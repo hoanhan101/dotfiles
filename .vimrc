@@ -22,7 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
@@ -78,9 +78,7 @@ let python_highlight_all=1
 
 " Color scheme
 syntax enable
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+colorscheme onedark
 
 " Hide .pyc file in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
