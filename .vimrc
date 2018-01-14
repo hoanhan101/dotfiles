@@ -17,7 +17,7 @@ call vundle#begin()
 " Alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" List os plugins and bundles
+" List of plugins and bundles
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
