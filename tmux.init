@@ -4,9 +4,16 @@
 #   tmux.init - Run a personalized tmux in a specific location
 #   Author: Hoanh An (hoanhan@bennington.edu)
 #   Date: 1/13/18
+#
+#   Features:
+#   - Create new session with argument-parse name and directory. 
+#   - Launch vim and NERDTree.
+#   - Split into 3 panes.
 # -------------------------------------------------------------
 
-tmux new-session -c ${1-$PWD} \; \
-    split-window -v \; \
-    split-window -h \; \
+tmux new-session -s ${1-dev} -c ${2-$PWD} \; \
+    send-keys 'vim' C-m \; \
+    send-keys ':NERDTree' C-m \; \
+    split-window -v -p 30 \; \
+    split-window -h -p 30 \; \
     select-pane -t 0 \;
