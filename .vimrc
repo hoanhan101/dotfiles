@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   .vimrc - Vim configs file 
-" 	Author: Hoanh An (hoanhan@bennington.edu)
+"   Author: Hoanh An (hoanhan@bennington.edu)
 "   Date: 1/13/17 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
