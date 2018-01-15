@@ -19,9 +19,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 	cp ~/.vimrc ~/.vimrc.old
 	cp "$DIR/.vimrc" ~
 	vim +PluginInstall +qall
-fi
-
-elif [ -e /etc/debian_version ]; then
+else
 	sudo apt-get update
 	sudo apt-get install vim
     sudo apt-get install tmux
