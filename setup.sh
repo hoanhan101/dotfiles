@@ -8,20 +8,27 @@
 
 set -e
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo $DIR
+echo "$DIR/.vimrc"
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     brew install macvim --override-system-vim
     brew install tmux
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp vimrc.vim ~/.vimrc 
+    cp "$DIR/.vimrc" ~
+    cp "$DIR/.tmux.conf" ~
 	vim +PluginInstall +qall
 else
 	sudo apt-get update
 	sudo apt-get install vim
     sudo apt-get install tmux
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp vimrc.vim ~/.vimrc 
+    cp "$DIR/.vimrc" ~
+    cp "$DIR/.tmux.conf" ~
 	vim +PluginInstall +qall
 fi
 
