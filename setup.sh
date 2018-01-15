@@ -16,7 +16,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     brew install macvim --override-system-vim
     brew install tmux
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp ~/.vimrc ~/.vimrc.old
 	cp "$DIR/.vimrc" ~
 	vim +PluginInstall +qall
 else
@@ -24,7 +23,6 @@ else
 	sudo apt-get install vim
     sudo apt-get install tmux
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	cp ~/.vimrc ~/.vimrc.old
 	cp "$DIR/.vimrc" ~
 	vim +PluginInstall +qall
 fi
