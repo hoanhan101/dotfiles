@@ -43,7 +43,7 @@ echo "-------------------------------------------------------------"
 cp "$PWD/.tmux.conf" ~
 
 echo "-------------------------------------------------------------"
-echo "*                 INSTALL PLUGINS VIA VUNDLE                 *"
+echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
 echo "-------------------------------------------------------------"
 vim +PluginInstall +qall
 
