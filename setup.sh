@@ -8,7 +8,7 @@
 
 set -e
 
-if [[ "$(uname -s)" == "Darwin" ]]; then
+if [ "$(uname -s)" == "Darwin" ]; then
     echo "Install Homebrew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
