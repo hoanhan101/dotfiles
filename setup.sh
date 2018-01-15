@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# -------------------------------------------------------------
+#   setup.sh - Setup dev environment 
+#   Author: Hoanh An (hoanhan@bennington.edu)
+#   Date: 1/13/18
+# -------------------------------------------------------------
+
+set -e
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew update
+    brew install macvim --override-system-vim
+    brew install tmux
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	cp ~/.vimrc ~/.vimrc.old
+	cp "$DIR/.vimrc" ~
+	vim +PluginInstall +qall
+fi
+
+elif [ -e /etc/debian_version ]; then
+	sudo apt-get update
+	sudo apt-get install vim
+    sudo apt-get install tmux
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	cp ~/.vimrc ~/.vimrc.old
+	cp "$DIR/.vimrc" ~
+	vim +PluginInstall +qall
+fi
+
+echo "Done"
