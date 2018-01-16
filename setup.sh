@@ -37,7 +37,7 @@ echo "-------------------------------------------------------------"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "-------------------------------------------------------------"
-echo "*                   COPY .VIMRC TO ROOT                     *"
+echo "*                LOAD BASE PLUGINS TO .VIMRC                 *"
 echo "-------------------------------------------------------------"
 cp "$PWD/.plugins.vim" ~/.vimrc
 
