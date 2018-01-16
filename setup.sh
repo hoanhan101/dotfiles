@@ -50,7 +50,7 @@ echo "-------------------------------------------------------------"
 echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
 echo "-------------------------------------------------------------"
 vim +PluginInstall +qall
-python3 ~/.vim/bundle/YouCompleteMe/install.py --all
+python3 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
