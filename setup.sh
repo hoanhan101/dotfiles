@@ -21,6 +21,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
     brew update
     brew install macvim --override-system-vim
     brew install tmux
+    brew install python3
 else
     sudo apt-get update
     sudo apt-get install vim
