@@ -9,6 +9,8 @@ git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup
 
 ### Ubuntu-based Docker container
 ```
+apt-get update
+apt-get install git
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
