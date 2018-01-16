@@ -39,18 +39,23 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "-------------------------------------------------------------"
 echo "*                   COPY .VIMRC TO ROOT                     *"
 echo "-------------------------------------------------------------"
-cp "$PWD/.vimrc" ~
-
-echo "-------------------------------------------------------------"
-echo "*                  COPY .TMUX.CONF TO ROOT                  *"
-echo "-------------------------------------------------------------"
-cp "$PWD/.tmux.conf" ~
+cp "$PWD/.plugins.vim" ~/.vimrc
 
 echo "-------------------------------------------------------------"
 echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
 echo "-------------------------------------------------------------"
 vim +PluginInstall +qall
 python3 ~/.vim/bundle/YouCompleteMe/install.py
+
+echo "-------------------------------------------------------------"
+echo "*                     LOAD VIM CONFIGS                      *"
+echo "-------------------------------------------------------------"
+cp "$PWD/.vimrc" ~
+
+echo "-------------------------------------------------------------"
+echo "*                     LOAD TMUX CONFIGS                     *"
+echo "-------------------------------------------------------------"
+cp "$PWD/.tmux.conf" ~
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
