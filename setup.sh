@@ -26,15 +26,14 @@ else
     sudo apt-get update
     sudo apt-get install vim
     sudo apt-get install tmux
-    sudo apt-get install build-essential cmake
-    sudo apt-get install python-dev python3-dev
+    sudo apt-get install -y build-essential cmake
+    sudo apt-get install -y python-dev python3-dev
 fi
 
 echo "-------------------------------------------------------------"
 echo "*                        VUNDLE                             *"
 echo "-------------------------------------------------------------"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 
 echo "-------------------------------------------------------------"
 echo "*                   COPY .VIMRC TO ROOT                     *"
@@ -50,6 +49,7 @@ echo "-------------------------------------------------------------"
 echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
 echo "-------------------------------------------------------------"
 vim +PluginInstall +qall
+python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
