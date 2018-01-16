@@ -33,8 +33,7 @@ echo "-------------------------------------------------------------"
 echo "*                        VUNDLE                             *"
 echo "-------------------------------------------------------------"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
-cd ~
+python3 ~/.vim/bundle/YouCompleteMe/install.py --all
 
 echo "-------------------------------------------------------------"
 echo "*                   COPY .VIMRC TO ROOT                     *"
