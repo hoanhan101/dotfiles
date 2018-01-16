@@ -2,19 +2,19 @@
 
 ### Installation 
 
-### Mac OSX, Ubuntu Linux x64
+#### Mac OSX, Ubuntu Linux x64
 ```
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
 ```
 
-### Ubuntu-based Docker container
+#### Ubuntu-based Docker container
 ```
 apt-get update
 apt-get install git
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
-### Start `tmux` by
+### `tmux`
 ```
 ./tmux.init [session-name] [working-directory]
 ```
