@@ -25,12 +25,16 @@ else
     sudo apt-get update
     sudo apt-get install vim
     sudo apt-get install tmux
+    sudo apt-get install build-essential cmake
+    sudo apt-get install python-dev python3-dev
 fi
 
 echo "-------------------------------------------------------------"
 echo "*                        VUNDLE                             *"
 echo "-------------------------------------------------------------"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
+cd ~
 
 echo "-------------------------------------------------------------"
 echo "*                   COPY .VIMRC TO ROOT                     *"
