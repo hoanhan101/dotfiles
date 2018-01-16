@@ -137,6 +137,10 @@ set noswapfile
 
 set clipboard=unnamed
 
+" Disable <Press Enter...> prompt
+set shortmess=a
+set cmdheight=2
+
 " Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tabstop=4
