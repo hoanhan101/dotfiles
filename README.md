@@ -1,8 +1,15 @@
 # dev-setup
 
 ### Installation 
+
+### Mac OSX, Ubuntu Linux x64
 ```
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
+```
+
+### Ubuntu-based Docker container
+```
+git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
 ### Start `tmux` by
