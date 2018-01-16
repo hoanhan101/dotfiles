@@ -14,7 +14,7 @@ apt-get install git
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
-### `tmux`
+### tmux
 ```
 ./tmux.init [session-name] [working-directory]
 ```
