@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # -------------------------------------------------------------
-#   setup.sh - Setup dev environment 
+#   docker-setup.sh - Same as setup.sh, wihout using sudo 
 #   Author: Hoanh An (hoanhan@bennington.edu)
 #   Date: 1/13/18
 # -------------------------------------------------------------
