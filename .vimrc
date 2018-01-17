@@ -26,6 +26,10 @@ Plugin 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'christoomey/vim-system-copy'
 
 " Extras
 "Plugin 'vim-syntastic/syntastic'
@@ -134,11 +138,6 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
-
-" Enable copying to system clipboard 
-set clipboard=unnamed
-vmap <C-x> :!pbcopy<CR>  
-vmap <C-c> :w !pbcopy<CR><CR>
 
 " Disable <Press Enter...> prompt
 set shortmess=a
