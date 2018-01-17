@@ -18,17 +18,9 @@ call vundle#begin()
 
 " List of plugins and bundles
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'nvie/vim-flake8'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'kien/ctrlp.vim'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-" Extras
-"Plugin 'vim-syntastic/syntastic'
 
 " All of the plugins must be added before the following line
 call vundle#end()            " required

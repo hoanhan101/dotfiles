@@ -11,7 +11,7 @@ echo "*                    BEGIN INSTALLING                       *"
 echo "-------------------------------------------------------------"
 
 echo "-------------------------------------------------------------"
-echo "*                       VIM & TMUX                          *"
+echo "*                 VIM,TMUX, & NECESSARY TOOLS               *"
 echo "-------------------------------------------------------------"
 
 set -e
@@ -32,25 +32,22 @@ else
 fi
 
 echo "-------------------------------------------------------------"
-echo "*                        VUNDLE                             *"
+echo "*               INSTALL VUNDLE AND BASE PLUGINS             *"
 echo "-------------------------------------------------------------"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-echo "-------------------------------------------------------------"
-echo "*                LOAD BASE PLUGINS TO .VIMRC                 *"
-echo "-------------------------------------------------------------"
 cp "$PWD/.plugins.vim" ~/.vimrc
-
-echo "-------------------------------------------------------------"
-echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
-echo "-------------------------------------------------------------"
 vim +PluginInstall +qall
-python3 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo "-------------------------------------------------------------"
 echo "*                     LOAD VIM CONFIGS                      *"
 echo "-------------------------------------------------------------"
 cp "$PWD/.vimrc" ~
+
+echo "-------------------------------------------------------------"
+echo "*                 INSTALL ADDITIONAL CONFIGS                *"
+echo "-------------------------------------------------------------"
+vim +PluginInstall +qall
+python3 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo "-------------------------------------------------------------"
 echo "*                     LOAD TMUX CONFIGS                     *"
