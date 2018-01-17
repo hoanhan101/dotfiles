@@ -135,7 +135,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Enable copying to system clipboard 
 set clipboard=unnamed
+vmap <C-x> :!pbcopy<CR>  
+vmap <C-c> :w !pbcopy<CR><CR>
 
 " Disable <Press Enter...> prompt
 set shortmess=a
