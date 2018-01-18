@@ -14,20 +14,22 @@ apt-get install git
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
-#### Install `zsh` on AWS EC2 Ubuntu instance
+#### `zsh` on AWS EC2 Ubuntu instance
 ```
 sudo apt-get install zsh
 ```
-Mannually `sudo vim /etc/pam.d/chsh` and comment the line `comment auth required pam_shells.so`
+Mannually `sudo vim /etc/pam.d/chsh` and comment the `comment auth required pam_shells.so`.
 
-Then `sudo chsh $USER -s $(which zsh)` and restart.
+`sudo chsh $USER -s $(which zsh)` and restart.
 
 Now `zsh` is working and we can install `oh-my-zsh`:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-### `tmux` usage
+### Usage
+
+#### `tmux`
 ```
 ./tmux.init [session-name] [working-directory]
 ```
