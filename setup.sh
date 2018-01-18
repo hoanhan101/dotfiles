@@ -31,8 +31,8 @@ else
     sudo apt-get install -y python-dev python3-dev
     
     sudo apt-get install -y zsh
+    sudo chsh ubuntu -s /bin/zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 fi
 
 echo "-------------------------------------------------------------"
