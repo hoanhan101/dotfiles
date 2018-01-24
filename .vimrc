@@ -4,6 +4,10 @@
 "   Date: 1/13/17 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Set to auto read when a file is changed from the outside
+set autoread
+au CursorHold * checktime     
+
 " Vundle - Plugins/Bundles Manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " required
@@ -130,9 +134,6 @@ nmap <Leader>w :w!<CR>
 
 " :W sudo saves the file 
 command W w !sudo tee % > /dev/null
-
-" Set to auto read when a file is changed from the outside
-set autoread
 
 " Disable backup and swap files 
 set nobackup
