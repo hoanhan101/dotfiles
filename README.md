@@ -18,7 +18,7 @@ git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docke
 ```
 sudo apt-get install zsh
 ```
-Mannually `sudo vim /etc/pam.d/chsh` and comment the `comment auth required pam_shells.so`.
+Mannually `sudo vim /etc/pam.d/chsh` and comment the `auth required pam_shells.so`.
 
 `sudo chsh $USER -s $(which zsh)` and restart.
 
@@ -35,5 +35,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 where default `session-name` is `dev` and default `working-directory` is
 current directory.
-
-
