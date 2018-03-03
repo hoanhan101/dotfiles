@@ -86,6 +86,7 @@ let python_highlight_all=1
 " Color scheme
 syntax enable
 colorscheme onedark
+hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 " Hide .pyc file in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
@@ -119,6 +120,7 @@ set mouse=a
 
 " Showing line numbers
 set number
+set tw=79
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7

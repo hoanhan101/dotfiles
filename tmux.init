@@ -11,11 +11,31 @@
 #   - Split into 3 panes.
 # -------------------------------------------------------------
 
+#  ---------
+# |    |    |
+# |    |    |
+#       ----
+# |    |    |
+# |    |    |
+#  ---------
 tmux new-session -s ${1-dev} -c ${2-$PWD} \; \
-    send-keys 'vim' C-m \; \
-    send-keys ':NERDTree' C-m \; \
-    split-window -v -p 30 \; \
     split-window -h \; \
-    select-pane -t 0 \; \
-    split-window -h \; \
+    split-window -v \; \
     select-pane -t 0 \;
+
+
+#  ---------
+# |    |    |
+# |    |    |
+# |    |    |
+#  ---------
+# |    |    |
+#  ---------
+# tmux new-session -s ${1-dev} -c ${2-$PWD} \; \
+#     send-keys 'vim' C-m \; \
+#     send-keys ':NERDTree' C-m \; \
+#     split-window -v -p 30 \; \
+#     split-window -h \; \
+#     select-pane -t 0 \; \
+#     split-window -h \; \
+#     select-pane -t 0 \;
