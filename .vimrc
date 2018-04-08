@@ -120,7 +120,9 @@ set mouse=a
 
 " Showing line numbers
 set number
-set tw=79
+
+" Automatic word wrapping
+set tw=99
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
