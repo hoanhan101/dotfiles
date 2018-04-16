@@ -91,6 +91,9 @@ syntax enable
 colorscheme onedark
 hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
+" Rebind <Leader> key
+let mapleader = ","
+
 " Hide .pyc file in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
 nnoremap <Leader>t :NERDTreeToggle<CR>
@@ -100,9 +103,6 @@ set laststatus=2
 
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Rebind <Leader> key
-let mapleader = ","
-
 " History
 set history=700
 set undolevels=700
