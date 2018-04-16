@@ -60,6 +60,9 @@ nnoremap <space> za
 let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+" Golint
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
 " python virtualenv support
 "py << EOF
 "import os
@@ -90,7 +93,7 @@ hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 " Hide .pyc file in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
-nnoremap nt :NERDTreeToggle<CR>
+nnoremap <Leader>t :NERDTreeToggle<CR>
 
 " Powerline
 set laststatus=2
@@ -174,4 +177,4 @@ vnoremap > >gv  " better indentation
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+map <Leader>ss :setlocal spell!<cr>
