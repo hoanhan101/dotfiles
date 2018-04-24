@@ -8,7 +8,7 @@
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
 ```
 
-### Ubuntu-based Docker container
+### Docker container on AWS EC2 Ubuntu
 
 ```
 apt-get update
@@ -16,7 +16,7 @@ apt-get install git
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
-### zsh on AWS EC2 Ubuntu instance
+**Fix zsh**
 
 Since running these commands above for Ubuntu will not install zsh completely,
 here is how we might want to do it.
@@ -39,5 +39,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 ./tmux.init [session-name] [working-directory]
 ```
-where default `session-name` is `dev` and default `working-directory` is
-current directory.
+where default `session-name` is `dev` and default `working-directory` is current directory.
