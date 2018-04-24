@@ -19,6 +19,7 @@ vim +PluginInstall +qall
 echo "Install additional configurations"
 cp "$PWD/.vimrc" ~
 vim +PluginInstall +qall
+python3 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo "Load tmux configurations"
 cp "$PWD/.tmux.conf" ~
