@@ -7,9 +7,7 @@ RUN apt-get update && apt-get install -y \
     wget \
 	vim \
 	tmux \
-    shadow \
     zsh \
-    && chsh -s /bin/zsh \
 	build-essential cmake \
 	python-dev \
 	python3-dev \
@@ -22,6 +20,6 @@ RUN apt-get update && apt-get install -y \
 COPY * ./
 RUN ./start.sh
 
+RUN chsh -s /bin/zsh
 ENV SHELL /usr/bin/zsh
-WORKDIR /root
 ENTRYPOINT /bin/zsh
