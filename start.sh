@@ -6,6 +6,10 @@
 
 echo "Begin the process"
 
+echo "Create git identity"
+git config --global user.email "hoanhan@bennington.edu"
+git config --global user.name "Hoanh An"
+
 echo "Clone VundleVim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
