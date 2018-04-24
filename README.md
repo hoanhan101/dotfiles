@@ -5,15 +5,15 @@
 ### Mac OSX, Ubuntu Linux x64
 
 ```
-git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
+git clone https://github.com/hoanhan101/dev-setup.git
+cd dev-setup && ./setup.sh
 ```
 
-### Docker container on AWS EC2 Ubuntu
+### Docker
 
 ```
-apt-get update
-apt-get install git
-git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
+docker build -t dev-setup .
+docker run -ti dev-setup /bin/bash 
 ```
 
 **Fix zsh**
