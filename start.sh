@@ -11,17 +11,14 @@ git config --global credential.helper cache
 git config --global user.email "hoanhan@bennington.edu"
 git config --global user.name "Hoanh An"
 
-echo "Clone VundleVim"
+echo "Install Vundle and base plugins"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-echo "Load base plugins to .vimrc"
 cp "$PWD/.plugins.vim" ~/.vimrc
-
-echo "Install plugins via vundle"
 vim +PluginInstall +qall
 
-echo "Load vim configurations"
+echo "Install additional configurations"
 cp "$PWD/.vimrc" ~
+vim +PluginInstall +qall
 
 echo "Load tmux configurations"
 cp "$PWD/.tmux.conf" ~
