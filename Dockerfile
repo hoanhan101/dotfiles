@@ -4,8 +4,12 @@ MAINTAINER Hoanh An <hoanhan@bennington.edu>
 RUN apt-get update && apt-get install -y \
 	git \
 	curl \
+    wget \
 	vim \
 	tmux \
+    shadow \
+    zsh \
+    && chsh -s /bin/zsh \
 	build-essential cmake \
 	python-dev \
 	python3-dev \
@@ -17,3 +21,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY * ./
 RUN ./start.sh
+
+ENV SHELL /usr/bin/zsh
+WORKDIR /root
+ENTRYPOINT /bin/zsh
