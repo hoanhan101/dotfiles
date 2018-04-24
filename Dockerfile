@@ -15,5 +15,5 @@ RUN apt-get update && apt-get install -y \
 	rm -rf /var/lib/apt/lists/* && \
 	apt-get clean
 
-COPY start.sh .
+COPY * ./
 RUN ./start.sh

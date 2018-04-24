@@ -4,36 +4,21 @@
 # Author: Hoanh An (hoanhan@bennington.edu)
 # Date: 04/24/18
 
-echo "============================================================="
-echo "*                    BEGIN INSTALLING                       *"
-echo "-------------------------------------------------------------"
+echo "Begin the process"
 
-echo "-------------------------------------------------------------"
-echo "*                        VUNDLE                             *"
-echo "-------------------------------------------------------------"
+echo "Clone VundleVim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-echo "-------------------------------------------------------------"
-echo "*                LOAD BASE PLUGINS TO .VIMRC                 *"
-echo "-------------------------------------------------------------"
+echo "Load base plugins to .vimrc"
 cp "$PWD/.plugins.vim" ~/.vimrc
 
-echo "-------------------------------------------------------------"
-echo "*                 INSTALL PLUGINS VIA VUNDLE                *"
-echo "-------------------------------------------------------------"
+echo "Install plugins via vundle"
 vim +PluginInstall +qall
-python3 ~/.vim/bundle/YouCompleteMe/install.py
 
-echo "-------------------------------------------------------------"
-echo "*                     LOAD VIM CONFIGS                      *"
-echo "-------------------------------------------------------------"
+echo "Load vim configurations"
 cp "$PWD/.vimrc" ~
 
-echo "-------------------------------------------------------------"
-echo "*                     LOAD TMUX CONFIGS                     *"
-echo "-------------------------------------------------------------"
+echo "Load tmux configurations"
 cp "$PWD/.tmux.conf" ~
 
-echo "-------------------------------------------------------------"
-echo "*              INSTALL COMPLETE - READY TO USE              *"
-echo "============================================================="
+echo "Ready to use"
