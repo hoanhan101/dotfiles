@@ -23,6 +23,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
     brew install tmux
     brew install cmake
     brew install python3
+    brew install zsh
 else
     sudo apt-get update
     sudo apt-get install vim
@@ -54,6 +55,16 @@ echo "-------------------------------------------------------------"
 echo "*                     LOAD TMUX CONFIGS                     *"
 echo "-------------------------------------------------------------"
 cp "$PWD/.tmux.conf" ~
+
+echo "-------------------------------------------------------------"
+echo "*                     INSTALL OH MY ZSH                     *"
+echo "-------------------------------------------------------------"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "-------------------------------------------------------------"
+echo "*                     LOAD ZSH CONFIGS                      *"
+echo "-------------------------------------------------------------"
+cp "$PWD/.zshrc" ~
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
