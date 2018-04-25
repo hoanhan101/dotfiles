@@ -17,9 +17,18 @@ cd dev-setup && ./setup.sh
 
 ### Docker
 
+**Build a fresh Docker image**
+
 ```
 docker build -t dev-setup .
 docker run -ti dev-setup /bin/bash 
+```
+
+**Already on a Docker container**
+
+```
+git clone https://github.com/hoanhan101/dev-setup.git
+cd dev-setup && ./docker-setup.sh
 ```
 
 ### zsh

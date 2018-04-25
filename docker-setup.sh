@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # -------------------------------------------------------------
-#   docker-setup.sh - Same as setup.sh, wihout using sudo 
+#   docker-setup.sh - Similar to setup.sh, wihout using sudo 
 #   Author: Hoanh An (hoanhan@bennington.edu)
 #   Date: 1/13/18
 # -------------------------------------------------------------
@@ -16,20 +16,12 @@ echo "-------------------------------------------------------------"
 
 set -e
 
-if [ "$(uname -s)" == "Darwin" ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew update
-    brew install macvim --override-system-vim
-    brew install tmux
-    brew install cmake
-    brew install python3
-else
-    apt-get update
-    apt-get install vim
-    apt-get install tmux
-    apt-get install -y build-essential cmake
-    apt-get install -y python-dev python3-dev
-fi
+apt-get update
+apt-get install vim
+apt-get install tmux
+apt-get install -y build-essential cmake
+apt-get install -y python-dev python3-dev
+apt-get install zsh
 
 echo "-------------------------------------------------------------"
 echo "*                        VUNDLE                             *"
@@ -56,6 +48,16 @@ echo "-------------------------------------------------------------"
 echo "*                     LOAD TMUX CONFIGS                     *"
 echo "-------------------------------------------------------------"
 cp "$PWD/.tmux.conf" ~
+
+echo "-------------------------------------------------------------"
+echo "*                     INSTALL OH MY ZSH                     *"
+echo "-------------------------------------------------------------"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "-------------------------------------------------------------"
+echo "*                     LOAD ZSH CONFIGS                      *"
+echo "-------------------------------------------------------------"
+cp "$PWD/.zshrc" ~
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
