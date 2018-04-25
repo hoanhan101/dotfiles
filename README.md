@@ -2,7 +2,9 @@
 
 ## Installation 
 
-### Mac OSX, Ubuntu Linux x64
+### Mac OS, Ubuntu Linux x64
+
+**Mac OS Note**: Requires Xcode to fully install all the dependencies.
 
 ```
 git clone https://github.com/hoanhan101/dev-setup.git
