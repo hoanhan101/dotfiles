@@ -7,8 +7,6 @@
 # Cyan '=>' symbol
 SYMBOL='\033[0;36m=>\033[0m'
 
-echo "${SYMBOL} Begin the process"
-
 echo "${SYMBOL} Create git identity"
 git config --global credential.helper cache
 git config --global user.email "hoanhan@bennington.edu"
@@ -41,5 +39,3 @@ EOT
 
 echo "${SYMBOL} Clone the github repo itself"
 git clone https://github.com/hoanhan101/dev-setup.git
-
-echo "${SYMBOL} Ready to use"
