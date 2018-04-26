@@ -7,6 +7,10 @@
 # Cyan '=>' symbol
 SYMBOL='\033[0;36m=>\033[0m'
 
+echo "${SYMBOL} Use Unicde"
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+
 echo "${SYMBOL} Create git identity"
 git config --global credential.helper cache
 git config --global user.email "hoanhan@bennington.edu"
