@@ -10,13 +10,13 @@ the scripts that support Linux and Docker so I can have other options.
 
 - [x] Build a Docker image that contains the development setup
 - [x] Make zsh default shell and load configurations
-- [ ] Install Go
+- [x] Install Go
 - [ ] Compress image size (maybe use alpine instead of ubuntu as base image)
 
 ### Issues
 
 - [x] Powerline font error
-- [ ] tmux config
+- [ ] vim config in tmux is not up-to-date (buffer error)
 
 ## Table of Contents
 
