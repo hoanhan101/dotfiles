@@ -16,7 +16,9 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python3-dev \
     python-setuptools \
+    python3-setuptools \
     python-pip \
+    python3-pip \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
