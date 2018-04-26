@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
 	curl \
     wget \
 	vim \
+    fonts-powerline \
 	tmux \
     zsh \
 	build-essential cmake \
