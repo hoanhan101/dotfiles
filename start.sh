@@ -22,6 +22,7 @@ vim +PluginInstall +qall
 echo "${SYMBOL} Install additional configurations"
 cp "$PWD/.vimrc" ~
 vim +PluginInstall +qall
+apt-get install fonts-powerline
 python3 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo "${SYMBOL} Load tmux configurations"
