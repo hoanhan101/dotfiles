@@ -64,7 +64,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "-------------------------------------------------------------"
 echo "*                     LOAD ZSH CONFIGS                      *"
 echo "-------------------------------------------------------------"
-cp "$PWD/.zshrc" ~
+cat <<EOT >> ~/.zshrc
+# ls every cd
+function chpwd() {
+    emulate -L zsh
+    ls -a
+}
+EOT
 
 echo "-------------------------------------------------------------"
 echo "*              INSTALL COMPLETE - READY TO USE              *"
