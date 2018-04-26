@@ -89,14 +89,7 @@ Need to setup [Powerline fonts](https://github.com/powerline/fonts) to prevent U
 
 ### Mac OS
 
-Install fonts:
-
-```
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh
-```
-
-Update font in iTerm2:
+The script is already included in the setup. Only need to update font in iTerm2:
 
 ```
 Preferences > Profiles > Text > Change Font > <Font name>

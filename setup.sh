@@ -24,6 +24,8 @@ if [ "$(uname -s)" == "Darwin" ]; then
     brew install cmake
     brew install python3
     brew install zsh
+    git clone https://github.com/powerline/fonts.git --depth=1
+    cd fonts; ./install.sh; cd ..; rm -rf fonts
 else
     sudo apt-get update
     sudo apt-get install vim
@@ -31,6 +33,7 @@ else
     sudo apt-get install -y build-essential cmake
     sudo apt-get install -y python-dev python3-dev
     sudo apt-get install -y zsh
+    sudo apt-get install fonts-powerline
 fi
 
 echo "-------------------------------------------------------------"

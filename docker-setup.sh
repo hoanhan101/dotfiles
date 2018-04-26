@@ -22,6 +22,7 @@ apt-get install tmux
 apt-get install -y build-essential cmake
 apt-get install -y python-dev python3-dev
 apt-get install zsh
+apt-get install fonts-powerline
 
 echo "-------------------------------------------------------------"
 echo "*                        VUNDLE                             *"
