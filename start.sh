@@ -10,7 +10,11 @@ SYMBOL='\033[0;36m=>\033[0m'
 echo "${SYMBOL} Create git identity"
 git config --global credential.helper cache
 git config --global user.email "hoanhan@bennington.edu"
+git config --system user.email "hoanhan@bennington.edu"
+git config --local user.email "hoanhan@bennington.edu"
 git config --global user.name "Hoanh An"
+git config --system user.name "Hoanh An"
+git config --local user.name "Hoanh An"
 
 echo "${SYMBOL} Install Vundle and base plugins"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
