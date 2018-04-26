@@ -2,38 +2,59 @@
 
 This repo contains my development setup, including different configurations for vim, tmux, zsh 
 and iTerm2. It works best on Mac OS because Macbook is my main machine. However, I also do include 
-the scripts that support Linux and Docker container based machine so I can have other options too.
+the scripts that support Linux and Docker so I can have other options.
+
+## Status
+
+### Features
+
+- [x] Build a Docker image that contains the development setup
+- [x] Make zsh default shell and load configurations
+- [ ] Install Go
+- [ ] Compress image size (maybe use alpine instead of ubuntu as base image)
+
+### Issues
+
+- [x] Powerline font error
+- [ ] tmux config
+
+## Table of Contents
+
+- [Installation](#installation)
+- [zsh](#zsh)
+- [Fonts](#fonts)
+- [Usage](#usage)
 
 ## Installation 
 
 ### Mac OS, Ubuntu Linux x64
-
-**Mac OS note:** Requires Xcode to fully install all the dependencies.
 
 ```
 git clone https://github.com/hoanhan101/dev-setup.git
 cd dev-setup && ./setup.sh
 ```
 
+> Mac OS requires Xcode to install some tools.
+
 ### Docker
 
 **Build a fresh Docker image**
 
 ```
-docker build -t dev-setup .
-docker run -ti dev-setup /bin/bash 
+docker build -t dev .
+docker run -ti dev
 ```
 
-**Already on a Docker container**
+**Install from a Docker container**
 
 ```
 git clone https://github.com/hoanhan101/dev-setup.git
 cd dev-setup && ./docker-setup.sh
 ```
 
-### zsh
+## zsh
 
-#### Mac OS
+### Mac OS
 
 Install and make zsh default shell. Need to restart after this in order for the changes to take place.
 
@@ -44,7 +65,7 @@ chsh -s $(which zsh)
 
 If these command doesn't work then can change the path directly in Terminal settings to `/usr/local/bin/zsh`.
 
-#### Ubuntu
+### Ubuntu
 
 If running the script doesn't install zsh completely, might want to try:
 
@@ -62,6 +83,25 @@ Now `zsh` is working and we can install `oh-my-zsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+## Fonts
+
+Need to setup [Powerline fonts](https://github.com/powerline/fonts) to prevent Unicode error.
+
+### Mac OS
+
+Install fonts:
+
+```
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts && ./install.sh
+```
+
+Update font in iTerm2:
+
+```
+Preferences > Profiles > Text > Change Font > <Font name>
+```
+
 ## Usage
 
 ### tmux
@@ -75,7 +115,7 @@ where default `session-name` is `dev` and default `working-directory` is current
 
 **Configurations**
 
-In order to switch between planes, need to remap Alt/Option key to Esc+ in Iterm2.
+In order to switch between planes, need to remap Alt/Option key to Esc+ in iTerm2.
 
 ```
 Preferences > Profiles > Keys > Left Key > Esc+
