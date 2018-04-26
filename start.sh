@@ -31,6 +31,15 @@ echo "${SYMBOL} Install oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "${SYMBOL} Load oh my zsh configurations"
-cp "$PWD/.zshrc" ~
+cat <<EOT >> ~/.zshrc
+# ls every cd
+function chpwd() {
+    emulate -L zsh
+    ls -a
+}
+EOT
+
+echo "${SYMBOL} Clone the github repo itself"
+git clone https://github.com/hoanhan101/dev-setup.git
 
 echo "${SYMBOL} Ready to use"
