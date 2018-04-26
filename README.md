@@ -17,6 +17,7 @@ the scripts that support Linux and Docker so I can have other options.
 
 - [x] Powerline font error
 - [ ] vim config in tmux is not up-to-date (buffer error)
+- [ ] time is out of sync in Docker container 
 
 ## Table of Contents
 
