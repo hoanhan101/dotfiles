@@ -38,14 +38,20 @@ cd dev-setup && ./setup.sh
 
 ### Docker
 
-**Build a fresh Docker image**
+**Quick run**
+
+```
+docker run -ti hoanhan/dev
+```
+
+**Build and run**
 
 ```
 docker build -t dev .
 docker run -ti dev
 ```
 
-**Install from a Docker container**
+**Install script from a Docker container**
 
 ```
 git clone https://github.com/hoanhan101/dev-setup.git
