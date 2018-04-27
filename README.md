@@ -119,7 +119,7 @@ Preferences > Profiles > Keys > +
 Going forward one word:
 
 ```
-Keyboard shortcut: ^f
+Keyboard shortcut: Option+f
 Action           : Send Escape Sequence
 Esc+             : f
 ```
@@ -127,7 +127,7 @@ Esc+             : f
 Going backward one word:
 
 ```
-Keyboard shortcut: ^b
+Keyboard shortcut: Option+b
 Action           : Send Escape Sequence
 Esc+             : b
 ```
@@ -135,7 +135,7 @@ Esc+             : b
 Delete backward one word:
 
 ```
-Keyboard shortcut: ^← Delete
+Keyboard shortcut: Option+Delete
 Action           : Send Hex Code 
 Value            : 0x1B 0x08
 ```
