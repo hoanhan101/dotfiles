@@ -24,7 +24,7 @@ the scripts that support Linux and Docker so I can have other options.
 
 - [Installation](#installation)
 - [zsh](#zsh)
-- [Fonts](#fonts)
+- [iTerm2](#iterm2)
 - [Usage](#usage)
 
 ## Installation 
@@ -91,16 +91,53 @@ Now `zsh` is working and we can install `oh-my-zsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Fonts
+## iTerm2
+
+### Font
 
 Need to setup [Powerline fonts](https://github.com/powerline/fonts) to prevent Unicode error.
-
-### Mac OS
-
 The script is already included in the setup. Only need to update font in iTerm2:
 
 ```
 Preferences > Profiles > Text > Change Font > <Font name>
+```
+
+### tmux
+
+In order to switch between planes in tmux, need to remap Alt/Option key to Esc+.
+
+```
+Preferences > Profiles > Keys > Left Key > Esc+
+```
+
+### Shortcuts
+
+```
+Preferences > Profiles > Keys > +
+```
+
+Going forward one word:
+
+```
+Keyboard shortcut: ^f
+Action           : Send Escape Sequence
+Esc+             : f
+```
+
+Going backward one word:
+
+```
+Keyboard shortcut: ^b
+Action           : Send Escape Sequence
+Esc+             : b
+```
+
+Delete backward one word:
+
+```
+Keyboard shortcut: ^← Delete
+Action           : Send Hex Code 
+Value            : 0x1B 0x08
 ```
 
 ## Usage
@@ -113,11 +150,3 @@ Preferences > Profiles > Text > Change Font > <Font name>
 ./tmux.init [session-name] [working-directory]
 ```
 where default `session-name` is `dev` and default `working-directory` is current directory.
-
-**Configurations**
-
-In order to switch between planes, need to remap Alt/Option key to Esc+ in iTerm2.
-
-```
-Preferences > Profiles > Keys > Left Key > Esc+
-```
