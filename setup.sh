@@ -29,6 +29,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
     cd fonts; ./install.sh; cd ..; rm -rf fonts
 else
     sudo apt-get update
+    sudo apt-get install xsel
     sudo apt-get install vim
     sudo apt-get install tmux
     sudo apt-get install -y build-essential cmake
@@ -36,6 +37,13 @@ else
     sudo apt-get install -y zsh
     sudo apt-get install fonts-powerline
 fi
+
+echo "-------------------------------------------------------------"
+echo "*                 CREATE GIT IDENTITY                        " 
+echo "-------------------------------------------------------------"
+git config --global credential.helper cache
+git config --global user.email "hoanhan@bennington.edu"
+git config --global user.name "Hoanh An"
 
 echo "-------------------------------------------------------------"
 echo "*               INSTALL VUNDLE AND BASE PLUGINS             *"
