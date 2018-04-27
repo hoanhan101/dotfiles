@@ -6,18 +6,22 @@ the scripts that support Linux and Docker so I can have other options.
 
 ## Status
 
-### Completed
+### Tasks
 
 - [x] Build a Docker image that contains the development setup
 - [x] Make zsh default shell and load configurations
 - [x] Install Go
-- [x] Use Unicode
-- [x] Fix Powerline font error
 - [x] Test on Docker
 - [x] Test on Ubuntu
 
 ### Ideas
 
+- [ ] Add Docker persistent volumne
+
+### Issues
+
+- [x] Use Unicode
+- [x] Fix Powerline font error
 - [ ] vim config in tmux is not up-to-date (buffer error)
 - [ ] time is out of sync in Docker container 
 
