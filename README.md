@@ -13,6 +13,7 @@ the scripts that support Linux and Docker so I can have other options.
 - [x] Install Go
 - [x] Test on Docker
 - [x] Test on Ubuntu
+- [ ] Configure automated builds on Docker Hub
 
 ### Ideas
 
