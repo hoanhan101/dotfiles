@@ -18,11 +18,11 @@ the scripts that support Linux and Docker so I can have other options.
 
 - [ ] Configure automated builds on Docker Hub
 - [ ] Export iTerm2 settings
-- [ ] Add Docker persistent volumne
+- [ ] Add Docker persistent volume (not really necessary at the moment)
 
 ### Issues
 
-- [x] Use Unicode
+- [x] Fix localization
 - [x] Fix Powerline font error
 - [ ] vim config in tmux is not up-to-date (buffer error)
 - [ ] time is out of sync in Docker container 
@@ -30,9 +30,13 @@ the scripts that support Linux and Docker so I can have other options.
 ## Table of Contents
 
 - [Installation](#installation)
-- [zsh](#zsh)
-- [iTerm2](#iterm2)
+  - [Mac OS, Ubuntu Linux x64](#mac-os-ubuntu-linux-x64)
+  - [Docker](#docker)
+- [Configuration](#configuration)
+  - [zsh](#zsh)
+  - [iTerm2](#iterm2)
 - [Usage](#usage)
+  - [tmux](#tmux)
 
 ## Installation 
 
@@ -46,6 +50,8 @@ cd dev-setup && ./setup.sh
 > Mac OS requires Xcode to install some tools.
 
 ### Docker
+
+Either one of these 3 options below:
 
 **Quick run**
 
@@ -67,9 +73,11 @@ git clone https://github.com/hoanhan101/dev-setup.git
 cd dev-setup && ./docker-setup.sh
 ```
 
-## zsh
+## Configuration
 
-### Mac OS
+### zsh
+
+**Mac OS**
 
 Install and make zsh default shell. Need to restart after this in order for the changes to take place.
 
@@ -80,7 +88,7 @@ chsh -s $(which zsh)
 
 If these command doesn't work then can change the path directly in Terminal settings to `/usr/local/bin/zsh`.
 
-### Ubuntu
+**Ubuntu**
 
 If running the script doesn't install zsh completely, might want to try:
 
@@ -98,9 +106,9 @@ Now `zsh` is working and we can install `oh-my-zsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## iTerm2
+### iTerm2
 
-### Font
+**Font**
 
 Need to setup [Powerline fonts](https://github.com/powerline/fonts) to prevent Unicode error.
 The script is already included in the setup. Only need to update font in iTerm2:
@@ -109,7 +117,7 @@ The script is already included in the setup. Only need to update font in iTerm2:
 Preferences > Profiles > Text > Change Font > <Font name>
 ```
 
-### tmux
+**tmux**
 
 In order to switch between planes in tmux, need to remap Alt/Option key to Esc+.
 
@@ -117,7 +125,7 @@ In order to switch between planes in tmux, need to remap Alt/Option key to Esc+.
 Preferences > Profiles > Keys > Left Key > Esc+
 ```
 
-### Shortcuts
+**Shortcuts**
 
 ```
 Preferences > Profiles > Keys > +
