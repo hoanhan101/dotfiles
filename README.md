@@ -20,6 +20,7 @@ the scripts that support Linux and Docker so I can have other options.
 ### Ideas
 
 - [ ] Add Docker persistent volume (not really necessary at the moment)
+- [ ] Git pull all subdirectories (ls | xargs -I{} git -C {} pull)
 
 ### Issues
 

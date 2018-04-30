@@ -42,7 +42,3 @@ ENV PATH /usr/local/go/bin:/go/bin:/usr/local/bin:$PATH
 RUN chsh -s /bin/zsh
 ENV SHELL /usr/bin/zsh
 ENTRYPOINT /bin/zsh
-
-# Go to Github directory and update all repositories
-# Put the script here so it can be executed when the container starts
-CMD cd ~/Github && ls | xargs -I{} git -C {} pull

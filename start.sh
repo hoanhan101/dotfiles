@@ -7,10 +7,11 @@
 # Cyan '=>' symbol
 SYMBOL='\033[0;36m=>\033[0m'
 
-echo "${SYMBOL} Create git identity"
+echo "${SYMBOL} Configure git"
 git config --global credential.helper cache
 git config --global user.email "hoanhan@bennington.edu"
 git config --global user.name "Hoanh An"
+git config --global alias.last 'log -3 HEAD'
 
 echo "${SYMBOL} Install Vundle and base plugins"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
