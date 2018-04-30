@@ -44,8 +44,7 @@ the scripts that support Linux and Docker so I can have other options.
 ### Mac OS, Ubuntu Linux x64
 
 ```
-git clone https://github.com/hoanhan101/dev-setup.git
-cd dev-setup && ./setup.sh
+git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
 ```
 
 > Mac OS requires Xcode to install some tools.
@@ -63,15 +62,13 @@ docker run -ti hoanhan/dev-setup
 **Build and run**
 
 ```
-docker build -t dev-setup .
-docker run -ti dev-setup
+docker build -t dev-setup . && docker run -ti dev-setup
 ```
 
 **Install script from a Docker container**
 
 ```
-git clone https://github.com/hoanhan101/dev-setup.git
-cd dev-setup && ./docker-setup.sh
+git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docker-setup.sh
 ```
 
 ## Configuration
@@ -83,8 +80,7 @@ cd dev-setup && ./docker-setup.sh
 Install and make zsh default shell. Need to restart after this in order for the changes to take place.
 
 ```
-brew install zsh
-chsh -s $(which zsh)
+brew install zsh && chsh -s $(which zsh)
 ```
 
 If these command doesn't work then can change the path directly in Terminal settings to `/usr/local/bin/zsh`.
