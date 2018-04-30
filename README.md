@@ -11,12 +11,13 @@ the scripts that support Linux and Docker so I can have other options.
 - [x] Build a Docker image that contains the development setup
 - [x] Make zsh default shell and load configurations
 - [x] Install Go
+- [x] Test on Mac
 - [x] Test on Docker
 - [x] Test on Ubuntu
+- [x] Configure automated builds on Docker Hub
 
 ### Ideas
 
-- [ ] Configure automated builds on Docker Hub
 - [ ] Export iTerm2 settings
 - [ ] Add Docker persistent volume (not really necessary at the moment)
 
@@ -56,14 +57,14 @@ Either one of these 3 options below:
 **Quick run**
 
 ```
-docker run -ti hoanhan/dev
+docker run -ti hoanhan/dev-setup
 ```
 
 **Build and run**
 
 ```
-docker build -t dev .
-docker run -ti dev
+docker build -t dev-setup .
+docker run -ti dev-setup
 ```
 
 **Install script from a Docker container**
