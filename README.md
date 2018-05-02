@@ -16,11 +16,11 @@ the scripts that support Linux and Docker so I can have other options.
 - [x] Test on Ubuntu
 - [x] Configure automated builds on Docker Hub
 - [x] Export iTerm2 settings
+- [x] Add zsh alias for git to pull all subdirectories (gpull)
 
 ### Ideas
 
 - [ ] Add Docker persistent volume (not really necessary at the moment)
-- [ ] Git pull all subdirectories (ls | xargs -I{} git -C {} pull)
 
 ### Issues
 
