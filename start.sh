@@ -51,4 +51,4 @@ git clone https://github.com/hoanhan101/pipi.git
 git clone https://github.com/hoanhan101/blockchain-db.git
 git clone https://github.com/hoanhan101/local-chord.git
 git clone https://github.com/hoanhan101/journal.git
-git clone https://github.com/hoanhan101/ultimate_go.git
+git clone https://github.com/hoanhan101/ultimate-go.git
