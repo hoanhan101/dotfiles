@@ -46,7 +46,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable folding
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=79
 
 let g:SimpylFold_docstring_preview=1
 
@@ -125,7 +125,7 @@ set mouse=a
 set number
 
 " Automatic word wrapping
-set tw=99
+set tw=79
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
