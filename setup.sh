@@ -36,6 +36,10 @@ else
     sudo apt-get install -y python-dev python3-dev
     sudo apt-get install -y zsh
     sudo apt-get install fonts-powerline
+    curl -s https://storage.googleapis.com/golang/go1.10.1.linux-amd64.tar.gz | tar -v -C /usr/local -xz
+    cd /; mkdir go; cd ~; export GOPATH=/go
+    export GOROOT=/usr/local/go
+    export PATH=/usr/local/go/bin:/go/bin:/usr/local/bin:$PATH
 fi
 
 echo "-------------------------------------------------------------"
