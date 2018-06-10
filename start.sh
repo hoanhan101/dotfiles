@@ -43,12 +43,12 @@ EOT
 
 echo "${SYMBOL} Clone recent Github repos"
 cd ~; mkdir Github; cd Github
-git clone https://github.com/hoanhan101/dev-setup.git
 git clone https://github.com/hoanhan101/hstore.git
-git clone https://github.com/hoanhan101/go-playground.git
-git clone https://github.com/hoanhan101/open-rec.git
-git clone https://github.com/hoanhan101/pipi.git
-git clone https://github.com/hoanhan101/blockchain-db.git
-git clone https://github.com/hoanhan101/hchord.git
-git clone https://github.com/hoanhan101/journal.git
 git clone https://github.com/hoanhan101/ultimate-go.git
+git clone https://github.com/hoanhan101/go-playground.git
+git clone https://github.com/hoanhan101/go-challenge.git
+git clone https://github.com/hoanhan101/hchord.git
+git clone https://github.com/hoanhan101/open-rec.git
+git clone https://github.com/hoanhan101/blockchain-db.git
+git clone https://github.com/hoanhan101/links.git
+git clone https://github.com/hoanhan101/dev-setup.git
