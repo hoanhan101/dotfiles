@@ -34,6 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
 " Extras
 "Plugin 'vim-syntastic/syntastic'
