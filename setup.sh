@@ -30,6 +30,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
 else
     sudo apt-get update
     sudo apt-get install xsel
+    sudo apt-get install xclip
     sudo apt-get install vim
     sudo apt-get install tmux
     sudo apt-get install -y build-essential cmake

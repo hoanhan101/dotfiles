@@ -37,6 +37,7 @@ the scripts that support Linux and Docker so I can have other options.
 - [Configuration](#configuration)
   - [zsh](#zsh)
   - [iTerm2](#iterm2)
+  - [Ubuntu](#ubuntu)
 - [Usage](#usage)
   - [tmux](#tmux)
 
@@ -160,6 +161,17 @@ Delete backward one word:
 Keyboard shortcut: Option+Delete
 Action           : Send Hex Code 
 Value            : 0x1B 0x08
+```
+
+### Ubuntu
+
+**Copy and paste in tmux**
+
+Make sure to install `xclip` in put this one for vim yanking mode in tmux config
+file:
+
+```
+bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 ```
 
 ## Usage

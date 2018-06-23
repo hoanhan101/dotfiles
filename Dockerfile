@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     vim \
     fonts-powerline \
     xsel \
+    xclip \
     tmux \
     zsh \
     build-essential cmake \
