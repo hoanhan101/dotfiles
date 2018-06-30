@@ -122,7 +122,7 @@ Need to setup [Powerline fonts](https://github.com/powerline/fonts) to prevent U
 The script is already included in the setup. Only need to update font in iTerm2:
 
 ```
-Preferences > Profiles > Text > Change Font > <Font name>
+Preferences > Profiles > Text > Change Font > 12pt Inconsolata-dz for Powerline
 ```
 
 **tmux**
