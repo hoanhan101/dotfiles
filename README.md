@@ -15,7 +15,6 @@ the scripts that support Linux and Docker so I can have other options.
 - [x] Test on Docker
 - [x] Test on Ubuntu
 - [x] Configure automated builds on Docker Hub
-- [x] Export iTerm2 settings
 - [x] Add zsh alias for git to pull all subdirectories (gpull)
 
 ### Ideas
@@ -106,15 +105,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 ### iTerm2
-
-**Quick setup**
-
-Can load the exported iTerm2 settings by:
-```
-Preferences > General > Load preferences from a custom folder or URL > com.googlecode.iterm2.plist
-```
-
-Below are manual configurations if importing doesn't work.
 
 **Font**
 
