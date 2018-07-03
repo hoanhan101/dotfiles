@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/hoanhan/.oh-my-zsh
+export ZSH="/Users/hoanhan/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -93,8 +93,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# ----------------------------------------------
+# GLOBAL ALIASES - MAY OVERWIRTE SYSTEM COMMANDS
+# ----------------------------------------------
+
+# Use MacVim instead of system vim
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# ls -la every time ls
+alias ls='ls -la'
+
 # ls every cd
 function chpwd() {
     emulate -L zsh
-    ls -a
+    ls -la
 }
+
+# ----------------
+# Setup for Golang
+# ----------------
+export GOPATH=$HOME/go
+export PATH=/usr/local/bin:$PATH
+
+# aliases for Go programs, start with `goto` prefix
+alias tohoanhan101="cd /Users/hoanhan/go/src/github.com/hoanhan101"
+alias tovapor="cd /Users/hoanhan/go/src/github.com/vapor-ware"
