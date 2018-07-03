@@ -96,6 +96,11 @@ Add it to the bash profile:
 echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
 ```
 
+If it is saying failing to write, do this again:
+```
+export GPG_TTY=$(tty)
+```
+
 ### zsh
 
 **Mac OS**
