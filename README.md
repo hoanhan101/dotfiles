@@ -4,36 +4,13 @@ This repo contains my development setup, including different configurations for 
 and iTerm2. It works best on Mac OS because Macbook is my main machine. However, I also do include 
 the scripts that support Linux and Docker so I can have other options.
 
-## Status
-
-### Tasks
-
-- [x] Build a Docker image that contains the development setup
-- [x] Make zsh default shell and load configurations
-- [x] Install Go
-- [x] Test on Mac
-- [x] Test on Docker
-- [x] Test on Ubuntu
-- [x] Configure automated builds on Docker Hub
-- [x] Add zsh alias for git to pull all subdirectories (gpull)
-
-### Ideas
-
-- [ ] Add Docker persistent volume (not really necessary at the moment)
-
-### Issues
-
-- [x] Fix localization
-- [x] Fix Powerline font error
-- [ ] vim config in tmux is not up-to-date (buffer error)
-- [ ] time is out of sync in Docker container 
-
 ## Table of Contents
 
 - [Installation](#installation)
   - [Mac OS, Ubuntu Linux x64](#mac-os-ubuntu-linux-x64)
   - [Docker](#docker)
 - [Configuration](#configuration)
+  - [Github](#github)
   - [zsh](#zsh)
   - [iTerm2](#iterm2)
   - [Ubuntu](#ubuntu)
@@ -44,11 +21,24 @@ the scripts that support Linux and Docker so I can have other options.
 
 ### Mac OS, Ubuntu Linux x64
 
+> Mac OS requires Xcode to install some tools.
+
 ```
 git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
 ```
 
-> Mac OS requires Xcode to install some tools.
+**MacVim**
+
+Instead of ovewriting system Vim, a better way is to alias the binary that
+comes with MacVim.
+- Download and the latest version of [Macvim](https://github.com/macvim-dev/macvim/releases)
+- Put this in `.zshrc`: `alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'`.
+
+**YouCompleteMe**
+
+If there is anything wrong with YouComplete, read the [documentaion
+](https://github.com/Valloric/YouCompleteMe#mac-os-x) carefully
+one more time.: https://github.com/Valloric/YouCompleteMe#mac-os-x
 
 ### Docker
 
@@ -73,6 +63,38 @@ git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./docke
 ```
 
 ## Configuration
+
+### Github
+
+**Sign commits using GPG**
+
+Generate the key:
+```
+gpg --full-generate-key
+```
+
+Copy the key ID:
+```
+gpg --list-secret-keys --keyid-format LONG
+```
+
+Substitute with:
+```
+gpg --armor --export <KEY_ID>
+```
+
+Copy from stdout and add to Github account.
+
+Set the signing key in Git:
+```
+git config --global user.signingkey <KEY_ID>
+git config --global commit.gpgSign true
+```
+
+Add it to the bash profile:
+```
+echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
+```
 
 ### zsh
 
