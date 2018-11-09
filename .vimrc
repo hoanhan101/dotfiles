@@ -35,6 +35,10 @@ Plugin 'christoomey/vim-system-copy'
 Plugin 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
+" Plugins for a distraction-free writing env
+Plugin 'junegunn/goyo.vim'
+Plugin 'reedes/vim-pencil'
+
 " All of the plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

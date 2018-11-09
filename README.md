@@ -16,6 +16,7 @@ the scripts that support Linux and Docker so I can have other options.
   - [Ubuntu](#ubuntu)
 - [Usage](#usage)
   - [tmux](#tmux)
+  - [Distraction-free writing environment](#distraction-free-writing-environment)
 
 ## Installation 
 
@@ -201,3 +202,9 @@ bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 ./tmux.init [session-name] [working-directory]
 ```
 where default `session-name` is `dev` and default `working-directory` is current directory.
+
+### Distraction-free writing environment
+
+In vim:
+- `:Goyo` to enter a distraction-free mode.
+- `:SoftPencil` to enable soft-wrap.
