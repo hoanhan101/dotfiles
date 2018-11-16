@@ -153,3 +153,9 @@ vnoremap > >gv  " better indentation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
 map <Leader>ss :setlocal spell!<cr>
+
+" Other
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Permanent undo. Use with caution.
+" set undodir=~/.vimdid
+" set undofile
