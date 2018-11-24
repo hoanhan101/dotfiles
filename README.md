@@ -14,6 +14,7 @@ the scripts that support Linux and Docker so I can have other options.
   - [zsh](#zsh)
   - [iTerm2](#iterm2)
   - [Ubuntu](#ubuntu)
+  - [MacOS](#macos)
 - [Usage](#usage)
   - [tmux](#tmux)
   - [Distraction-free writing environment](#distraction-free-writing-environment)
@@ -191,6 +192,14 @@ file:
 ```
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 ```
+
+### MacOS
+
+**Speed up vim cursor**
+
+Set the Preferences/Keyboard settings at max for these two options:
+- Key Repeat
+- Deplay Until Repeat
 
 ## Usage
 
