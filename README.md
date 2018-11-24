@@ -214,6 +214,18 @@ Set the Preferences/Keyboard settings at max for these two options:
 - Key Repeat
 - Deplay Until Repeat
 
+**`ls` color**
+
+In case `ls` doesn't have colored output, which might be the result of a
+conflict between zsh theme and `LSCOLORS`. A simple way to fix:
+
+```
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+```
+([source](https://github.com/robbyrussell/oh-my-zsh/issues/5349))
+
 ## Usage
 
 ### tmux
