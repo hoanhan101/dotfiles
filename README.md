@@ -12,6 +12,7 @@ the scripts that support Linux and Docker so I can have other options.
 - [Configuration](#configuration)
   - [Github](#github)
   - [zsh](#zsh)
+  - [Oh My Zsh](#oh-my-zsh)
   - [iTerm2](#iterm2)
   - [Ubuntu](#ubuntu)
   - [MacOS](#macos)
@@ -133,10 +134,17 @@ Now `zsh` is working and we can install `oh-my-zsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+### Oh My Zsh
+
 **Enable syntax hightlight**
 
 Link:
 [github](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+
+**Enable fish-like autosuggestion**
+
+Link:
+[github](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 
 ### iTerm2
 
