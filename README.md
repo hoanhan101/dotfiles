@@ -12,8 +12,10 @@ the scripts that support Linux and Docker so I can have other options.
 - [Configuration](#configuration)
   - [Github](#github)
   - [zsh](#zsh)
+  - [Oh My Zsh](#oh-my-zsh)
   - [iTerm2](#iterm2)
   - [Ubuntu](#ubuntu)
+  - [MacOS](#macos)
 - [Usage](#usage)
   - [tmux](#tmux)
   - [Distraction-free writing environment](#distraction-free-writing-environment)
@@ -132,6 +134,18 @@ Now `zsh` is working and we can install `oh-my-zsh`:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+### Oh My Zsh
+
+**Enable syntax hightlight**
+
+Link:
+[github](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+
+**Enable fish-like autosuggestion**
+
+Link:
+[github](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
 ### iTerm2
 
 **Font**
@@ -191,6 +205,26 @@ file:
 ```
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 ```
+
+### MacOS
+
+**Speed up vim cursor**
+
+Set the Preferences/Keyboard settings at max for these two options:
+- Key Repeat
+- Deplay Until Repeat
+
+**`ls` color**
+
+In case `ls` doesn't have colored output, which might be the result of a
+conflict between zsh theme and `LSCOLORS`. A simple way to fix:
+
+```
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+```
+([source](https://github.com/robbyrussell/oh-my-zsh/issues/5349))
 
 ## Usage
 
