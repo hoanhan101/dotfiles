@@ -40,15 +40,3 @@ function chpwd() {
 # git pull all subdirectories
 alias gpull="ls | xargs -I{} git -C {} pull"
 EOT
-
-echo "${SYMBOL} Clone recent Github repos"
-cd ~; mkdir Github; cd Github
-git clone https://github.com/hoanhan101/hstore.git
-git clone https://github.com/hoanhan101/ultimate-go.git
-git clone https://github.com/hoanhan101/go-playground.git
-git clone https://github.com/hoanhan101/go-challenge.git
-git clone https://github.com/hoanhan101/hchord.git
-git clone https://github.com/hoanhan101/open-rec.git
-git clone https://github.com/hoanhan101/blockchain-db.git
-git clone https://github.com/hoanhan101/links.git
-git clone https://github.com/hoanhan101/dev-setup.git
