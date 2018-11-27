@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y \
 COPY * ./
 RUN ./start.sh
 
-# Install Go
+# Install Go (v1.10.1)
 RUN curl -s https://storage.googleapis.com/golang/go1.10.1.linux-amd64.tar.gz | tar -v -C /usr/local -xz
 ENV GOPATH /go
 ENV GOROOT /usr/local/go
