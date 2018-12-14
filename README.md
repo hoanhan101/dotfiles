@@ -16,6 +16,7 @@ the scripts that support Linux and Docker so I can have other options.
   - [iTerm2](#iterm2)
   - [Ubuntu](#ubuntu)
   - [MacOS](#macos)
+  - [Golang](#golang)
 - [Usage](#usage)
   - [tmux](#tmux)
   - [Distraction-free writing environment](#distraction-free-writing-environment)
@@ -225,6 +226,29 @@ export CLICOLOR=1
 export CLICOLOR_FORCE=1
 ```
 ([source](https://github.com/robbyrussell/oh-my-zsh/issues/5349))
+
+### Golang
+
+**Set `GOPATH`**
+
+> Reference:
+> [hoanhan101/go-playground](https://github.com/hoanhan101/go-playground),
+> [hoanhan101/ultimate-go](https://github.com/hoanhan101/ultimate-go)
+
+After downloading the binary release fro your system, need to setup the GOPATH
+correctly. A simple and straightforward setup is to, first `mkdir $HOME/go`,
+then in `.zshrc`:
+```
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+```
+
+**Set alias for quick navigation**
+
+In `.zshrc`, set something like this:
+```
+alias tohoanhan101="cd /Users/hoanhan/go/src/github.com/hoanhan101"
+```
 
 ## Usage
 
