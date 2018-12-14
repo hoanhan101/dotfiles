@@ -63,7 +63,7 @@ set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " Color scheme
 syntax enable
-colorscheme onedark
+colorscheme dracula
 hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 " Rebind <Leader> key
