@@ -84,6 +84,7 @@ Substitute with:
 ```
 gpg --armor --export <KEY_ID>
 ```
+> [Github reference](https://help.github.com/articles/generating-a-new-gpg-key/)
 
 Copy from stdout and add to Github account.
 
