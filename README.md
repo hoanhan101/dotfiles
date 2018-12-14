@@ -32,8 +32,7 @@ git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup
 
 **MacVim**
 
-Instead of ovewriting system Vim, a better way is to alias the binary that
-comes with MacVim.
+If `brew install vim` doesn't work, might want to try Macvim.
 - Download and the latest version of [Macvim](https://github.com/macvim-dev/macvim/releases)
 - Put this in `.zshrc`: `alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'`.
 

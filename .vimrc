@@ -159,3 +159,6 @@ map <Leader>ss :setlocal spell!<cr>
 " Permanent undo. Use with caution.
 " set undodir=~/.vimdid
 " set undofile
+
+" Make backspace work
+set backspace=indent,eol,start
