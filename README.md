@@ -97,7 +97,7 @@ git config --global commit.gpgSign true
 
 Add it to the bash profile:
 ```
-echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
+echo 'export GPG_TTY=$(tty)' >> ~/.profile
 ```
 
 If it is saying failing to write, do this again:
