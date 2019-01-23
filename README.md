@@ -250,6 +250,11 @@ In `.zshrc`, set something like this:
 alias tohoanhan101="cd /Users/hoanhan/go/src/github.com/hoanhan101"
 ```
 
+**Setup autocompletion to use with vim**
+
+Need to get the [nsf/gocode](https://github.com/nsf/gocode) package first
+before adding the plugin to vim and update with Vundle. 
+
 ## Usage
 
 ### tmux
