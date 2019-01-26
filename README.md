@@ -105,6 +105,9 @@ If it is saying failing to write, do this again:
 export GPG_TTY=$(tty)
 ```
 
+If this is failing to write every time we start a session, try
+[this](https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0).
+
 ### zsh
 
 **Mac OS**
