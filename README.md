@@ -207,6 +207,17 @@ Set the Preferences/Keyboard settings at max for these two options:
 - Key Repeat
 - Deplay Until Repeat
 
+**Slow `<SHIFT> + O` in vim**
+
+The problem is, on some terminals,`<SHIFT> + O` is a prefix for several
+keycodes. To fix it, need to set the timeout as follows:
+```
+:set timeout timeoutlen=5000 ttimeoutlen=100
+```
+
+> Reference:
+> [https://github.com/vim/vim/issues/24](https://github.com/vim/vim/issues/24)
+
 **`ls` color**
 
 In case `ls` doesn't have colored output, which might be the result of a
