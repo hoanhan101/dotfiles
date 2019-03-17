@@ -29,7 +29,7 @@ the scripts that support Linux and Docker so I can have other options.
 > Mac OS requires Xcode to install some tools.
 
 ```
-git clone https://github.com/hoanhan101/dev-setup.git && cd dev-setup && ./setup.sh
+git clone https://github.com/hoanhan101/dotfiles.git && cd dotfiles && ./setup.sh
 ```
 
 **MacVim**
