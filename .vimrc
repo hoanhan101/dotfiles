@@ -154,6 +154,9 @@ vnoremap > >gv  " better indentation
 " Pressing ,ss will toggle and untoggle spell checking
 map <Leader>ss :setlocal spell!<cr>
 
+" Automatically turn spell checking on these files below
+autocmd FileType markdown,go setlocal spell
+
 " Other
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Permanent undo. Use with caution.
