@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   .vimrc - Vim configs file 
-"   Author: Hoanh An (hoanhan@bennington.edu)
+"   Author: Hoanh An (hoanhan101@gmail.com)
 "   Date: 1/13/17 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -63,7 +63,7 @@ set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 " Color scheme
 syntax enable
-colorscheme dracula
+" colorscheme dracula
 hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 " Rebind <Leader> key
