@@ -38,6 +38,10 @@ If `brew install vim` doesn't work, might want to try Macvim.
 - Download and the latest version of [Macvim](https://github.com/macvim-dev/macvim/releases)
 - Put this in `.zshrc`: `alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'`.
 
+**Tell vim not to add a new line at end of line**
+
+> https://stackoverflow.com/questions/1050640/how-to-stop-vim-from-adding-a-newline-at-end-of-file
+
 **YouCompleteMe**
 
 If there is anything wrong with YouComplete, read the [documentaion
