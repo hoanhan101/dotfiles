@@ -17,9 +17,8 @@ echo "-------------------------------------------------------------"
 set -e
 
 if [ "$(uname -s)" == "Darwin" ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update
-    brew install vim
     brew install gpg
     brew install pinentry-mac
     brew install tmux
@@ -33,7 +32,6 @@ else
     sudo apt-get update
     sudo apt-get install xsel
     sudo apt-get install xclip
-    sudo apt-get install vim
     sudo apt-get install tmux
     sudo apt-get install -y build-essential cmake
     sudo apt-get install -y python-dev python3-dev
@@ -48,7 +46,7 @@ echo "-------------------------------------------------------------"
 echo "*                 CREATE GIT IDENTITY                        " 
 echo "-------------------------------------------------------------"
 git config --global credential.helper cache
-git config --global user.email "hoanhan@bennington.edu"
+git config --global user.email "hoanhan101@gmail.com"
 git config --global user.name "Hoanh An"
 
 echo "-------------------------------------------------------------"
